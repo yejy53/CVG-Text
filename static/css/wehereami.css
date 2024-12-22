@@ -1,0 +1,95 @@
+.huggingface-link {
+  background-color: #ffd54f;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 9px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.huggingface-link:hover {
+  background-color: #ffc107;
+}
+
+.huggingface-icon {
+  width: 25px;
+  height: 25px;
+}
+/* 基本布局 */
+#Tabdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.tab-row {
+  display: flex;
+  background-color: #d8dee4;
+  border-radius: 50px;
+  overflow: hidden;
+  padding: 4px;
+  position: relative;
+  width: 20vw;
+  justify-content: space-evenly;
+}
+
+.tab-item {
+  padding: 10px 20px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.tab-item.active {
+  color: #1e76da;
+  font-weight: bold;
+}
+
+.tab-item:not(.active) {
+  color: white;
+}
+
+.image-tab-item {
+  padding: 10px 20px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.image-tab-item.active {
+  color: #1e76da;
+  font-weight: bold;
+}
+
+.image-tab-item:not(.active) {
+  color: white;
+}
+
+.tab-indicator {
+  position: absolute;
+  height: 4px;
+  background-color: white;
+  transition: left 0.3s ease, width 0.3s ease;
+  border-radius: 40px;
+}
+.image-tab-indicator {
+  position: absolute;
+  height: 4px;
+  background-color: white;
+  transition: left 0.3s ease, width 0.3s ease;
+  border-radius: 40px;
+}
+
+#map {
+  width: 100%;
+  height: 50vh;
+}
