@@ -79,7 +79,10 @@
         height: 100vh;
       "
     >
-      <h1 class="title is-1 publication-title" style="margin-top: 9vh">
+      <h1
+        class="title is-1 publication-title"
+        style="margin-top: 9vh; display: flex; align-items: center"
+      >
         <img
           id="painting_icon1"
           width="8%"
@@ -91,8 +94,13 @@
             height: 60px;
           "
         />
+        <!-- <img
+          src="static/icons/title.png"
+          style="width: 300px; height: 80px; margin-left: 10px"
+        /> -->
         <span class="highlight">Where am I? </span>
       </h1>
+
       <h1
         class="title is-2 publication-title"
         style="color: #020202; width: 35vw"
@@ -102,7 +110,7 @@
       <div
         class="authors"
         style="
-          font-size: 1.5rem;
+          font-size: 1.2rem;
           color: #444;
           margin: 1.5rem 0;
           text-align: center;
@@ -175,6 +183,83 @@
           >
         </p>
       </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+        "
+      >
+        <a href="https://www.sysu.edu.cn/" target="_blank">
+          <img
+            src="static/icons/sysu.png"
+            style="width: 120px; height: 120px"
+          />
+        </a>
+        <a href="https://www.shlab.org.cn/" target="_blank">
+          <img
+            src="static/icons/ShangHaiAILab.png"
+            style="width: 200px; height: 60px"
+          />
+        </a>
+        <a href="https://www.sensetime.com/" target="_blank">
+          <img
+            src="static/icons/Sensetime.png"
+            style="width: 120px; height: 50px"
+          />
+        </a>
+        <a href="https://www.whu.edu.cn/" target="_blank">
+          <img src="static/icons/WHU.png" style="width: 120px; height: 120px" />
+        </a>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="publication-links">
+          <!-- Arxiv PDF link -->
+          <span class="link-block">
+            <a
+              href="https://arxiv.org/abs/2412.17007"
+              target="_blank"
+              class="external-link button is-normal is-rounded is-dark"
+            >
+              <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>Paper</span>
+            </a>
+          </span>
+
+          <!-- Github link -->
+          <span class="link-block">
+            <a
+              href="https://github.com/yejy53/CVG-Text"
+              target="_blank"
+              class="external-link button is-normal is-rounded is-dark"
+            >
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </span>
+
+          <!-- huggingface abstract Link -->
+          <span class="link-block">
+            <a
+              href="https://huggingface.co/datasets/CVG-Text/CVG-Text"
+              target="_blank"
+              class="external-link button is-normal is-rounded is-dark"
+            >
+              <span class="icon" style="vertical-align: middle; font-size: 20px"
+                >🤗</span
+              >
+              <span>Dataset</span>
+            </a>
+          </span>
+        </div>
+      </div>
+
       <img src="static/images/start.png" style="width: 40vw" />
       <h1
         style="
@@ -199,7 +284,7 @@
     <!-- End Start -->
 
     <!--  Abstract  -->
-    <section
+    <!-- <section
       class="section hero is-light"
       style="
         display: flex;
@@ -228,7 +313,7 @@
           text-align: justify;
           margin: 20px auto;
           margin-top: 2vh;
-          margin-bottom: 1vh;
+          margin-bottom: 0vh;
         "
       >
         Cross-view geo-localization identifies the locations of street-view
@@ -249,8 +334,15 @@
         it not only provides similarity scores but also offers retrieval
         reasons.
       </h1>
-    </section>
+    </section> -->
     <!-- Abstract -->
+
+    <!-- <div
+      style="
+        height: 150px;
+        background: linear-gradient(to bottom, #f5f5f5, rgb(252, 246, 238));
+      "
+    ></div> -->
 
     <!-- Task Application -->
     <section
@@ -260,7 +352,6 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        background-color: rgb(252, 246, 238);
       "
     >
       <h2
@@ -276,25 +367,7 @@
       >
         Task Application
       </h2>
-      <h1
-        style="
-          width: 40vw;
-          font-size: 20px;
-          line-height: 1.5;
-          text-align: justify;
-          margin: 20px auto;
-          margin-top: 2vh;
-          margin-bottom: 5vh;
-        "
-      >
-        Text-guided geo-localization is commonly observed in daily scenarios.
-        For instance, taxi drivers rely on passengers' verbal instructions to
-        identify their location, tourists seek assistance from service centers
-        by describing their position when lost, or delivery drivers and couriers
-        are guided to specific locations through text descriptions. In
-        situations where GPS or Wi-Fi signals are disrupted, describing
-        locations in natural language plays a crucial role.
-      </h1>
+
       <div id="Tabdiv" style="margin-bottom: 3vh">
         <!-- 标签行 -->
         <div class="tab-row" style="margin-bottom: 3vh">
@@ -317,9 +390,34 @@
           </video>
         </div>
       </div>
+
+      <h1
+        style="
+          width: 40vw;
+          font-size: 20px;
+          line-height: 1.5;
+          text-align: justify;
+          margin: 20px auto;
+          margin-top: 2vh;
+          margin-bottom: 5vh;
+        "
+      >
+        Text-guided geo-localization is commonly observed in daily scenarios.
+        For instance, taxi drivers rely on passengers' verbal instructions to
+        identify their location, tourists seek assistance from service centers
+        by describing their position when lost, or delivery drivers and couriers
+        are guided to specific locations through text descriptions. In
+        situations where GPS or Wi-Fi signals are disrupted, describing
+        locations in natural language plays a crucial role.
+      </h1>
     </section>
     <!-- End Task Application -->
-
+    <!-- <div
+      style="
+        height: 150px;
+        background: linear-gradient(to bottom, rgb(252, 246, 238), #ffffff);
+      "
+    ></div> -->
     <!-- Datasets -->
     <section
       class="hero is-small"
@@ -343,6 +441,39 @@
       >
         Datasets
       </h2>
+
+      <div id="Tabdiv" style="margin-bottom: 2vh">
+        <!-- 标签行 -->
+        <div class="tab-row" style="margin-bottom: 2vh">
+          <div class="image-tab-item" id="tab-1">
+            <img
+              src="static/icons/Newyork.png"
+              style="width: 30px; height: 30px; margin-right: 8px"
+            />
+            New York
+          </div>
+          <div class="image-tab-item" id="tab-2">
+            <img
+              src="static/icons/Brisbane.png"
+              style="width: 30px; height: 30px; margin-right: 8px"
+            />
+            Brisbane
+          </div>
+          <div class="image-tab-item" id="tab-3">
+            <img
+              src="static/icons/Tokyo.png"
+              style="width: 30px; height: 30px; margin-right: 8px"
+            />
+            Tokyo
+          </div>
+          <!-- 标签指示器 -->
+          <div class="image-tab-indicator"></div>
+        </div>
+        <div>
+          <!-- 用于显示PDF的canvas -->
+          <canvas class="tab-pdf-canvas" style="width: 42vw"></canvas>
+        </div>
+      </div>
 
       <h1
         style="
@@ -432,6 +563,45 @@
         three cities.
       </h1>
 
+      <!-- <h1
+        style="
+          width: 40vw;
+          font-size: 20px;
+          line-height: 1.5;
+          text-align: justify;
+          margin-bottom: 30px;
+        "
+      >
+        The bellow figures illustrate examples of data from the CVG-Text dataset
+        across three cities. The generated texts effectively capture the
+        geolocational information present in street-view images.
+      </h1> -->
+    </section>
+    <!-- End Datasets-->
+
+    <!-- Method  -->
+    <section
+      class="section hero"
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      "
+    >
+      <h2
+        class="title is-3"
+        style="
+          width: 40vw;
+          text-align: left;
+          margin-bottom: 30px;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        Method
+      </h2>
+
       <h1
         style="
           width: 40vw;
@@ -462,60 +632,6 @@
           margin-bottom: 30px;
         "
       >
-        The bellow figures illustrate examples of data from the CVG-Text dataset
-        across three cities. The generated texts effectively capture the
-        geolocational information present in street-view images.
-      </h1>
-
-      <div id="Tabdiv" style="margin-bottom: 5vh">
-        <!-- 标签行 -->
-        <div class="tab-row" style="margin-bottom: 5vh">
-          <div class="image-tab-item" id="tab-1">New York</div>
-          <div class="image-tab-item" id="tab-2">Brisbane</div>
-          <div class="image-tab-item" id="tab-3">Tokyo</div>
-          <!-- 标签指示器 -->
-          <div class="image-tab-indicator"></div>
-        </div>
-        <div>
-          <!-- 用于显示PDF的canvas -->
-          <canvas class="tab-pdf-canvas"></canvas>
-        </div>
-      </div>
-    </section>
-    <!-- End Datasets-->
-
-    <!-- Method  -->
-    <section
-      class="section hero is-light"
-      style="
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      "
-    >
-      <h2
-        class="title is-3"
-        style="
-          width: 40vw;
-          text-align: left;
-          margin-bottom: 30px;
-          margin-left: auto;
-          margin-right: auto;
-        "
-      >
-        Method
-      </h2>
-
-      <h1
-        style="
-          width: 40vw;
-          font-size: 20px;
-          line-height: 1.5;
-          text-align: justify;
-          margin-bottom: 30px;
-        "
-      >
         In this work, we introduce a novel task for cross-view geo-localization
         with natural language. The objective of this task is to leverage natural
         language descriptions to retrieve its corresponding OSM or satellite
@@ -533,7 +649,7 @@
 
       <img
         src="static/images/Method_1.png "
-        style="width: 32vw; margin-bottom: 5vh"
+        style="width: 32vw; margin-bottom: 0vh"
       />
     </section>
     <!-- End Method -->
@@ -614,9 +730,13 @@
         Qualitative evaluation
       </h1>
 
-      <div style="width: 38vw; margin-bottom: 3vh">
+      <!-- <div style="width: 38vw; margin-bottom: 3vh">
         <canvas id="pdfCanvas"></canvas>
-      </div>
+      </div> -->
+      <img
+        src="static/pdfs/Quantitative evaluation.png"
+        style="width: 38vw; margin-bottom: 3vh"
+      />
 
       <h1
         style="
@@ -914,10 +1034,10 @@
         });
       }
 
-      // 调用函数渲染PDF
-      const resultPdfUrl = "static/pdfs/Qualitative evaluation.pdf";
-      const resultTargetWidth = window.innerWidth * 0.36; // 32vw对应的宽度
-      resultRenderPdfToCanvas(resultPdfUrl, "pdfCanvas", resultTargetWidth);
+      // // 调用函数渲染PDF
+      // const resultPdfUrl = "static/pdfs/Qualitative evaluation.pdf";
+      // const resultTargetWidth = window.innerWidth * 0.36; // 32vw对应的宽度
+      // resultRenderPdfToCanvas(resultPdfUrl, "pdfCanvas", resultTargetWidth);
     </script>
   </body>
 </html>

@@ -63,6 +63,8 @@
   cursor: pointer;
   transition: color 0.3s ease;
   z-index: 1;
+  display: flex;
+  align-items: center;
 }
 
 .image-tab-item.active {
