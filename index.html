@@ -470,8 +470,8 @@
           <div class="image-tab-indicator"></div>
         </div>
         <div>
-          <!-- 用于显示PDF的canvas -->
-          <canvas class="tab-pdf-canvas" style="width: 42vw"></canvas>
+          <!-- 用于显示图片的img标签 -->
+          <img class="tab-image" style="width: 42vw" />
         </div>
       </div>
 
@@ -879,60 +879,97 @@
 
       updateTabs();
 
+      // let activeImageTab = 0;
+      // const imageTabItems = document.querySelectorAll(".image-tab-item");
+      // const imageTabIndicator = document.querySelector(".image-tab-indicator");
+      // const tabCanvas = document.querySelector(".tab-pdf-canvas"); // 选择 canvas
+      // const tabPdfs = [
+      //   "static/datasets/NY-text-case.pdf",
+      //   "static/datasets/Brisbane-text-case.pdf",
+      //   "static/datasets/Tykon-text-case.pdf",
+      // ];
+
+      // // 初始化pdf.js的工作线程
+      // pdfjsLib.GlobalWorkerOptions.workerSrc =
+      //   "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js";
+
+      // // 渲染PDF到canvas
+      // function renderPdf(pdfUrl) {
+      //   const loadingTask = pdfjsLib.getDocument(pdfUrl);
+      //   loadingTask.promise.then(function (pdf) {
+      //     // 获取第一页
+      //     pdf.getPage(1).then(function (page) {
+      //       const pageWidth = page.getViewport({ scale: 1 }).width; // 获取原始页面的宽度
+      //       const pageHeight = page.getViewport({ scale: 1 }).height; // 获取原始页面的高度
+
+      //       // 获取canvas的目标宽度（36vw）
+      //       const targetWidth = window.innerWidth * 0.36; // 36vw
+      //       const scale = targetWidth / pageWidth; // 计算缩放比例
+
+      //       // 计算渲染的视口
+      //       const viewport = page.getViewport({ scale: scale });
+
+      //       // 设置canvas的尺寸为缩放后的尺寸
+      //       tabCanvas.width = viewport.width;
+      //       tabCanvas.height = viewport.height;
+
+      //       const context = tabCanvas.getContext("2d");
+
+      //       // 渲染页面到canvas
+      //       const renderContext = {
+      //         canvasContext: context,
+      //         viewport: viewport,
+      //       };
+      //       page.render(renderContext).promise.then(function () {
+      //         console.log("Page rendered");
+      //       });
+      //     });
+      //   });
+      // }
+
+      // function updateImageTabs() {
+      //   imageTabItems.forEach((tab, index) => {
+      //     tab.classList.remove("active");
+      //     if (index === activeImageTab) {
+      //       tab.classList.add("active");
+      //       renderPdf(tabPdfs[index]); // 渲染选中的PDF文件
+      //     }
+      //     const activeTabElement = imageTabItems[activeImageTab];
+      //     const tabWidth = activeTabElement.offsetWidth;
+      //     const tabPosition = activeTabElement.offsetLeft;
+      //     const tabHeight = activeTabElement.offsetHeight;
+      //     imageTabIndicator.style.width = `${tabWidth}px`;
+      //     imageTabIndicator.style.left = `${tabPosition}px`;
+      //     imageTabIndicator.style.height = `${tabHeight}px`;
+      //   });
+      // }
+
+      // imageTabItems.forEach((item, index) => {
+      //   item.addEventListener("click", () => {
+      //     activeImageTab = index;
+      //     updateImageTabs();
+      //   });
+      // });
+
+      // updateImageTabs();
+
       let activeImageTab = 0;
       const imageTabItems = document.querySelectorAll(".image-tab-item");
       const imageTabIndicator = document.querySelector(".image-tab-indicator");
-      const tabCanvas = document.querySelector(".tab-pdf-canvas"); // 选择 canvas
-      const tabPdfs = [
-        "static/datasets/NY-text-case.pdf",
-        "static/datasets/Brisbane-text-case.pdf",
-        "static/datasets/Tykon-text-case.pdf",
+      const tabImage = document.querySelector(".tab-image"); // 选择用于显示图片的img标签
+      const tabImages = [
+        "static/datasets/NY-text-case.png",
+        "static/datasets/Brisbane-text-case.png",
+        "static/datasets/Tykon-text-case.png",
       ];
 
-      // 初始化pdf.js的工作线程
-      pdfjsLib.GlobalWorkerOptions.workerSrc =
-        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js";
-
-      // 渲染PDF到canvas
-      function renderPdf(pdfUrl) {
-        const loadingTask = pdfjsLib.getDocument(pdfUrl);
-        loadingTask.promise.then(function (pdf) {
-          // 获取第一页
-          pdf.getPage(1).then(function (page) {
-            const pageWidth = page.getViewport({ scale: 1 }).width; // 获取原始页面的宽度
-            const pageHeight = page.getViewport({ scale: 1 }).height; // 获取原始页面的高度
-
-            // 获取canvas的目标宽度（36vw）
-            const targetWidth = window.innerWidth * 0.36; // 36vw
-            const scale = targetWidth / pageWidth; // 计算缩放比例
-
-            // 计算渲染的视口
-            const viewport = page.getViewport({ scale: scale });
-
-            // 设置canvas的尺寸为缩放后的尺寸
-            tabCanvas.width = viewport.width;
-            tabCanvas.height = viewport.height;
-
-            const context = tabCanvas.getContext("2d");
-
-            // 渲染页面到canvas
-            const renderContext = {
-              canvasContext: context,
-              viewport: viewport,
-            };
-            page.render(renderContext).promise.then(function () {
-              console.log("Page rendered");
-            });
-          });
-        });
-      }
-
+      // 更新选项卡状态和图片显示
       function updateImageTabs() {
         imageTabItems.forEach((tab, index) => {
           tab.classList.remove("active");
           if (index === activeImageTab) {
             tab.classList.add("active");
-            renderPdf(tabPdfs[index]); // 渲染选中的PDF文件
+            tabImage.src = tabImages[index]; // 设置img标签的src为对应的图片
           }
           const activeTabElement = imageTabItems[activeImageTab];
           const tabWidth = activeTabElement.offsetWidth;
@@ -944,6 +981,7 @@
         });
       }
 
+      // 为每个选项卡添加点击事件监听器
       imageTabItems.forEach((item, index) => {
         item.addEventListener("click", () => {
           activeImageTab = index;
