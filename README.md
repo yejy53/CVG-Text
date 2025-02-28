@@ -57,9 +57,11 @@ pip install -r requirements.txt
 
 ## 🤗 Dataset Download and Path Configuration
 
-The images and annotation files for CVG-Text can be found at [https://huggingface.co/CVG-Text/CVG-Text](https://huggingface.co/datasets/CVG-Text/CVG-Text)
+**Dataset：** The images and annotation files for CVG-Text can be found at [https://huggingface.co/CVG-Text/CVG-Text](https://huggingface.co/datasets/CVG-Text/CVG-Text)
 
-After downloading, update the `/path/to/dataset/` in `./config.yaml` with the actual dataset paths.
+**Path Configuration：** After downloading, update the `/path/to/dataset/` in `./config.yaml` with the actual dataset paths.
+
+**Model Checkpoints：** Our model checkpoints are available at: [https://huggingface.co/CVG-Text/CrossText2Loc](https://huggingface.co/CVG-Text/CrossText2Loc)
 
 ## 🚀 Quick Start
 To retrieve satellite images (sat) using NewYork-mixed (panoramic + single-view) text and the Ours model, run:
@@ -76,6 +78,6 @@ python -m torch.distributed.run --nproc_per_node=4 finetune.py --lr 1e-5 --batch
 ```
 The `--logging` flag determines whether to save log files and model checkpoints.
 
-## 🤗 Model Checkpoints
+## 🤗 
 
-Our model checkpoints are available at: [https://huggingface.co/CVG-Text/CrossText2Loc](https://huggingface.co/CVG-Text/CrossText2Loc)
+
