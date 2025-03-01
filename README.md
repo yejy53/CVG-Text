@@ -78,6 +78,16 @@ python -m torch.distributed.run --nproc_per_node=4 finetune.py --lr 1e-5 --batch
 ```
 The `--logging` flag determines whether to save log files and model checkpoints.
 
-## 🤗 
+## BibTeX 🙏
+
+If you have any questions, be free to contact with me! 
+```
+@article{ye2024cross,
+  title={Where am I? Cross-View Geo-localization with Natural Language Descriptions},
+  author={Ye, Junyan and Lin, Honglin and Ou, Leyan and Chen, Dairong and Wang, Zihao and He, Conghui and Li, Weijia},
+  journal={arXiv preprint arXiv:2412.17007},
+  year={2024}
+}
+```
 
 
