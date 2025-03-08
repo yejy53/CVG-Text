@@ -7,13 +7,12 @@ Sun Yat-Sen University, Shanghai AI Laboratory, Sensetime Research, Wuhan Univer
 
 [![arXiv](https://img.shields.io/badge/Arxiv-2410.02761-b31b1b.svg?logo=arXiv)]([https://arxiv.org/abs/2410.02761](https://arxiv.org/abs/2412.17007)) 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://github.com/zhipeixu/FakeShield/blob/main/LICENSE) 
-[![hf_space](https://img.shields.io/badge/🤗-Huggingface%20Checkpoint-blue.svg)](https://huggingface.co/datasets/CVG-Text/CVG-Text)
 [![Home Page](https://img.shields.io/badge/Project_Page-CVG-Text.svg)](https://yejy53.github.io/CVG-Text/)
 
 
 <!--
 **CVG-Text/CVG-Text** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
+[![hf_space](https://img.shields.io/badge/🤗-Huggingface%20Checkpoint-blue.svg)](https://huggingface.co/datasets/CVG-Text/CVG-Text)
 Here are some ideas to get you started:
 
 - 🔭 I’m currently working on ...
@@ -25,6 +24,9 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fzhipeixu%2FFakeShield&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[https://huggingface.co/CVG-Text/CVG-Text](https://huggingface.co/datasets/CVG-Text/CVG-Text)
+[https://huggingface.co/CVG-Text/CrossText2Loc](https://huggingface.co/CVG-Text/CrossText2Loc)
+
 -->
 
 
@@ -57,12 +59,11 @@ pip install -r requirements.txt
 
 ## 🤗 Dataset Download and Path Configuration
 
-**Dataset：** The images and annotation files for CVG-Text can be found at [https://huggingface.co/CVG-Text/CVG-Text](https://huggingface.co/datasets/CVG-Text/CVG-Text)
+**Dataset：** The images and annotation files for CVG-Text can be found at 
 
 **Path Configuration：** After downloading, update the `/path/to/dataset/` in `./config.yaml` with the actual dataset paths.
 
-**Model Checkpoints：** Our model checkpoints are available at: [https://huggingface.co/CVG-Text/CrossText2Loc](https://huggingface.co/CVG-Text/CrossText2Loc)
-
+**Model Checkpoints：** Our model checkpoints are available at: 
 ## 🚀 Quick Start
 To retrieve satellite images (sat) using NewYork-mixed (panoramic + single-view) text and the Ours model, run:
 ```bash
