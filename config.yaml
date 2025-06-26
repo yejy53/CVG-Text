@@ -1,0 +1,32 @@
+hf_endpoint: "https://hf-mirror.com"
+
+custom_paths:
+  - "/path/to/EVA/EVA-CLIP/rei"
+
+pretrained_paths:
+  openclip_l14: "/path/to/pretrained_models/openclip-L.bin"
+  openclip_h14: "/path/to/pretrained_models/openclip-H.bin"
+  eva2_clip_b16: "/path/to/pretrained_models/EVA02_CLIP_B_psz16_s8B.pt"
+  eva2_clip_l14_336: "/path/to/pretrained_models/EVA02_CLIP_L_336_psz14_s6B.pt"
+  blip_b: "/path/to/pretrained_models/Salesforce/blip-itm-base-coco"
+  blip_l: "/path/to/pretrained_models/Salesforce/blip-itm-large-coco"
+
+paths:
+  # Image
+  osm_root_dir: "/path/to/dataset/{version}-OSM"
+  stv_root_dir: "/path/to/dataset/{version}-ground"
+  sat_root_dir: "/path/to/dataset/{version}-satellite"
+  photo_root_dir: "/path/to/dataset/{version}-photo"
+
+  # Annotation
+  trainset_path: "/path/to/dataset/CVG-text/{version}/train.json"
+  testset_path: "/path/to/dataset/CVG-text/{version}/test.json"
+  
+  # Results
+  checkpoint_dir: "./checkpoints"
+  result_dir: "./results"
+  case_dir: "./cases"
+  log_dir: "./logs"
+
+  # Word Cloud
+  categories_path: "./visualize/categories.yaml"

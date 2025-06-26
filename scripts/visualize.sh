@@ -1,0 +1,1 @@
+python visualize/visualizer.py --version NewYork --model CLIP-L/14@336 --expand --img_type sat
