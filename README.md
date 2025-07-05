@@ -8,7 +8,7 @@ Sun Yat-Sen University, Shanghai AI Laboratory, Sensetime Research, Wuhan Univer
 [![arXiv](https://img.shields.io/badge/Arxiv-2410.02761-b31b1b.svg?logo=arXiv)]([https://arxiv.org/abs/2410.02761](https://arxiv.org/abs/2412.17007)) 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://github.com/zhipeixu/FakeShield/blob/main/LICENSE) 
 [![Home Page](https://img.shields.io/badge/Project_Page-CVG-Text.svg)](https://yejy53.github.io/CVG-Text/)
-
+[![hf_space](https://img.shields.io/badge/🤗-Huggingface%20Checkpoint-blue.svg)](https://huggingface.co/CVG-Text/CrossText2Loc)
 
 <!--
 **CVG-Text/CVG-Text** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -59,11 +59,11 @@ pip install -r requirements.txt
 
 ## 🤗 Dataset Download and Path Configuration
 
-**Dataset：** The images and annotation files for CVG-Text can be found at 
+**Dataset：** The images and annotation files for CVG-Text can be found at https://huggingface.co/datasets/LHL3341/CVG-Text_full
 
 **Path Configuration：** After downloading, update the `/path/to/dataset/` in `./config.yaml` with the actual dataset paths.
 
-**Model Checkpoints：** Our model checkpoints are available at: 
+**Model Checkpoints：** Our model checkpoints are available at: https://huggingface.co/CVG-Text/CrossText2Loc
 ## 🚀 Quick Start
 To retrieve satellite images (sat) using NewYork-mixed (panoramic + single-view) text and the Ours model, run:
 ```bash
