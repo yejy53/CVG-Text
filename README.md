@@ -32,7 +32,7 @@ Here are some ideas to get you started:
 
 
 ## 📰 News
-
+* **[2025.6]**We are very happy to announce that [where am I](https://arxiv.org/abs/2412.17007) was accepted by **ICCV 2025**
 * **[2024.12]**  🔥 We have released **Where am I? Cross-View Geo-localization with Natural Language Descriptions**. Check out the [paper](https://arxiv.org/abs/2412.17007). The code and dataset are coming soon
 
 
