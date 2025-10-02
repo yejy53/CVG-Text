@@ -62,6 +62,10 @@ pip install -r requirements.txt
 
 **Dataset：** The images and annotation files for CVG-Text can be found at https://huggingface.co/datasets/LHL3341/CVG-Text_full
 
+Due to restrictions on Google Street View and Google Maps imagery, the dataset release will not include the raw street-view or satellite images themselves. Instead, each image is assigned a unique identifier (ID). Researchers can independently retrieve the corresponding images using their own API keys through the Google Street View API https://www.google.com/streetview/ and Google Maps Static API https://www.google.com/maps.
+
+
+
 **Path Configuration：** After downloading, update the `/path/to/dataset/` in `./config.yaml` with the actual dataset paths.
 
 **Model Checkpoints：** Our model checkpoints are available at: https://huggingface.co/CVG-Text/CrossText2Loc
