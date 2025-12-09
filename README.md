@@ -77,6 +77,7 @@ python zeroshot.py --version NewYork-mixed --img_type sat --model CLIP-L/14@336 
 You can also evaluate specific checkpoint by setting `--checkpoint {your_checkpoint_path}`
 For more examples, please refer to the script in `./scripts/evaluate.sh`.
 
+For attention visualization and the explainable retrieval module (ERM), please run the code in the `./visualize` directory
 ## 🏋️‍♂️ Train
 To train the Ours model on Brisbane-mixed and OSM datasets, use the following command:
 ```bash
