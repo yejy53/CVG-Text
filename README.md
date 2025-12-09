@@ -84,6 +84,15 @@ python -m torch.distributed.run --nproc_per_node=4 finetune.py --lr 1e-5 --batch
 ```
 The `--logging` flag determines whether to save log files and model checkpoints.
 
+## Note
+```
+AttributeError: 'ResidualAttentionBlock' object has no attribute 'attn_probs'
+```
+
+If you directly run visualization code, you may encounter this error. This is because the original OpenAI CLIP model does not store attention weights by default.
+
+To resolve this, please follow the solution provided in this issue: [hila-chefer/Transformer-MM-Explainability#39](https://github.com/hila-chefer/Transformer-MM-Explainability/issues/39).
+
 ## BibTeX 🙏
 
 If you have any questions, be free to contact with me! 
